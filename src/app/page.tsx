@@ -42,8 +42,8 @@ export default function Home() {
       </div>
       <div id="about" data-section="about">
         <SplitAbout
-          description="BrainRot is not just another cryptocurrency; it's a community-driven movement that fuses humor with finance. Our mission is to bring joy and innovation to the crypto space.">
-        </SplitAbout>
+          description="BrainRot is not just another cryptocurrency; it's a community-driven movement that fuses humor with finance. Our mission is to bring joy and innovation to the crypto space."
+        ></SplitAbout>
       </div>
       <div id="how-to-buy" data-section="how-to-buy">
         <HowToBuy2D variant="simple" />
@@ -55,16 +55,16 @@ export default function Home() {
           kpiItems={[
             { value: "10M", description: "Total Supply" },
             { value: "2M", description: "Circulating Supply" },
-            { value: "5%", description: "Liquidity Pool" },
+            { value: "5%", description: "Liquidity Pool" }
           ]}
         />
       </div>
       <div id="roadmap" data-section="roadmap">
         <ProcessRoadmapTimeline
           items={[
-            { id: 1, title: 'Initial Launch', description: 'Launch of BrainRot Coin and initial marketing.', image: '/images/logo.svg', items: [] },
-            { id: 2, title: 'Community Building', description: 'Building our community through engagement and utilities.', image: '/images/logo.svg', items: [] },
-            { id: 3, title: 'Partnerships', description: 'Establishing token partnerships and collaborations.', image: '/images/logo.svg', items: [] }
+            { id: '1', title: 'Initial Launch', description: 'Launch of BrainRot Coin and initial marketing.', image: '/images/logo.svg', items: [] },
+            { id: '2', title: 'Community Building', description: 'Building our community through engagement and utilities.', image: '/images/logo.svg', items: [] },
+            { id: '3', title: 'Partnerships', description: 'Establishing token partnerships and collaborations.', image: '/images/logo.svg', items: [] }
           ]}
         />
       </div>
