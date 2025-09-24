@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "BrainRot Meme Coin — chaotic memes, join with simple steps",
     description: "BrainRot Meme Coin fuses chaotic memes with simple crypto steps. Learn what the token does, how to buy, and why the community vibe matters—fast, friendly, and transparent.",
     type: "website",
-    url: "/",
+    url: "/",  
     siteName: "BrainRot Coin",
     images: [{
       url: "/images/logo.svg",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "BrainRot Meme Coin — chaotic memes, join with simple steps",
     description: "BrainRot Meme Coin fuses chaotic memes with simple crypto steps. Learn what the token does, how to buy, and why the community vibe matters—fast, friendly, and transparent.",
     images: ["/images/logo.svg"]
-  },
+  },  
   robots: { index: true, follow: true },
   icons: { icon: "/favicon.ico" }
 };
@@ -49,7 +49,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
-      <body className={`${interTight.variable} ${playfairDisplay.variable} antialiased bg-[linear-gradient(135deg,#0b0b14, #1a1a2b)] text-[#eaf2f7]`}> 
+      <body className={`${interTight.variable} ${playfairDisplay.variable} antialiased bg-[linear-gradient(135deg,#0b0b14,#1a1a2b)] text-[#eaf2f7]`}> 
         {children}
       </body>
     </html>

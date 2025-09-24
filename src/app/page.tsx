@@ -64,7 +64,6 @@ export default function Home() {
             { items: [{ label: "About Us", onClick: () => console.log('About clicked')} ] },
             { items: [{ label: "Contact Us", onClick: () => console.log('Contact clicked')} ] }
           ]}
-          onPrivacyClick={() => console.log('Privacy policy click')}
         />
       </div>
     </SiteThemeProvider>
