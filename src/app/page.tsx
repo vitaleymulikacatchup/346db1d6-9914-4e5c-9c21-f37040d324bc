@@ -6,6 +6,7 @@ import SplitAbout from '@/components/sections/layouts/about/SplitAbout';
 import HowToBuy2D from '@/components/sections/layouts/howtobuy/2DHTB';
 import ExpandingGridTokenomics from '@/components/sections/layouts/tokenomics/ExpandingGridTokenomics';
 import FooterLogoEmphasis from '@/components/footer/FooterLogoEmphasis';
+import YearRoadmapTimeline from '@/components/sections/layouts/roadmap/YearRoadmapTimeline';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
             { name: "About", id: "about" },
             { name: "How to Buy", id: "how-to-buy" },
             { name: "Tokenomics", id: "tokenomics" },
+            { name: "Roadmap", id: "roadmap" },
             { name: "Footer", id: "footer" }
           ]}
         />
@@ -51,6 +53,15 @@ export default function Home() {
             { id: 1, title: "Liquidity", description: "50% of tokens locked for stability." },
             { id: 2, title: "Rewards", description: "10% of transactions go to community rewards." },
             { id: 3, title: "Marketing", description: "Investing in our brand presence and growth." }
+          ]}
+        />
+      </div>
+      <div id="roadmap" data-section="roadmap" className="scroll-mt-24">
+        <YearRoadmapTimeline
+          items={[
+            { year: "2023", title: "Launch", description: "Kickstarting our journey with the initial community launch." },
+            { year: "2024", title: "Expansion", description: "Introducing new features and wider community outreach." },
+            { year: "2025", title: "Global Reach", description: "Expanding our presence in international markets." },
           ]}
         />
       </div>
