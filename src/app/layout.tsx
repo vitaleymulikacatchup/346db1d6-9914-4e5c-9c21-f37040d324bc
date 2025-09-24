@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter_Tight, Playfair_Display } from "next/font/google";
+import { Inter_Tight, Poppins } from "next/font/google";
 import "./globals.css";
 
 const interTight = Inter_Tight({
@@ -8,48 +8,52 @@ const interTight = Inter_Tight({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "800"]
 });
 
 export const metadata: Metadata = {
-  title: "BrainRot Meme Coin — chaotic memes, join with simple steps",
-  description: "BrainRot Meme Coin fuses chaotic memes with simple crypto steps. Learn what the token does, how to buy, and why the community vibe matters—fast, friendly, and transparent.",
-  keywords: ["memecoin", "cryptocurrency", "how to buy", "tokenomics", "community", "meme culture", "web3", "blockchain", "digital assets", "humor"],
+  title: "BrainRot Meme Coin: chaotic memes, simple buy steps",
+  description: "BrainRot Meme Coin fuses chaotic meme culture with clear, simple buy steps. Learn what the token does, how to participate, and why the community vibe matters.",
+  keywords: ["memecoin","cryptocurrency","how to buy","tokenomics","roadmap","community","web3","blockchain","meme culture","brainrot"],
   alternates: {
     canonical: "/"
   },
   openGraph: {
-    title: "BrainRot Meme Coin — chaotic memes, join with simple steps",
-    description: "BrainRot Meme Coin fuses chaotic memes with simple crypto steps. Learn what the token does, how to buy, and why the community vibe matters—fast, friendly, and transparent.",
+    title: "BrainRot Meme Coin: chaotic memes, simple buy steps",
+    description: "BrainRot Meme Coin fuses chaotic meme culture with clear, simple buy steps. Learn what the token does, how to participate, and why the community vibe matters.",
     type: "website",
-    url: "/",  
+    url: "/",
     siteName: "BrainRot Coin",
     images: [{
       url: "/images/logo.svg",
       width: 1200,
       height: 630,
-      alt: "BrainRot Meme Coin — chaotic memes, join with simple steps"
+      alt: "BrainRot Meme Coin"
     }]
   },
   twitter: {
     card: "summary_large_image",
-    title: "BrainRot Meme Coin — chaotic memes, join with simple steps",
-    description: "BrainRot Meme Coin fuses chaotic memes with simple crypto steps. Learn what the token does, how to buy, and why the community vibe matters—fast, friendly, and transparent.",
+    title: "BrainRot Meme Coin: chaotic memes, simple buy steps",
+    description: "BrainRot Meme Coin fuses chaotic meme culture with clear, simple buy steps. Learn what the token does, how to participate, and why the community vibe matters.",
     images: ["/images/logo.svg"]
-  },  
+  },
   robots: { index: true, follow: true },
   icons: { icon: "/favicon.ico" }
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode; }>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
-      <body className={`${interTight.variable} ${playfairDisplay.variable} antialiased bg-[linear-gradient(135deg,#0b0b14,#1a1a2b)] text-[#eaf2f7]`}> 
+      <body
+        className={`${interTight.variable} ${poppins.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

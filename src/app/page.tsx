@@ -1,80 +1,95 @@
 "use client";
 import { SiteThemeProvider } from '@/components/sections/ThemeProvider';
 import NavbarLayoutSplitBottom from '@/components/navigation/NavbarLayoutSplitBottom/NavbarLayoutSplitBottom';
-import TokenBillboardHero from '@/components/sections/layouts/hero/TokenBillboardHero';
+import FrameHero from '@/components/sections/layouts/hero/FrameHero';
 import SplitAbout from '@/components/sections/layouts/about/SplitAbout';
 import HowToBuy2D from '@/components/sections/layouts/howtobuy/2DHTB';
-import ExpandingGridTokenomics from '@/components/sections/layouts/tokenomics/ExpandingGridTokenomics';
-import FooterLogoEmphasis from '@/components/footer/FooterLogoEmphasis';
-import YearRoadmapTimeline from '@/components/sections/layouts/roadmap/YearRoadmapTimeline';
+import NumberGridTokenomics from '@/components/sections/layouts/tokenomics/NumberGridTokenomics';
+import ProcessRoadmapTimeline from '@/components/sections/layouts/roadmap/ProcessRoadmap';
+import FooterBase from '@/components/footer/FooterBase';
 
 export default function Home() {
   return (
-    <SiteThemeProvider theme={{ styleVariant: "funAndTrendy", colorTemplate: 1, textAnimation: "slide" }}>
+    <SiteThemeProvider theme={{
+      styleVariant: "funAndTrendy",
+      colorTemplate: 1,
+      textAnimation: "slide",
+    }}>
       <div id="nav" data-section="nav">
         <NavbarLayoutSplitBottom
           logoSrc="/images/logo.svg"
-          logoWidth={100}
+          logoWidth={120}
           logoHeight={40}
           buttonText="Buy BrainRot"
-          onButtonClick={() => console.log('Buy action')}
+          onButtonClick={() => window.location.href = '#how-to-buy'}
           navItems={[
-            { name: "Hero", id: "hero" },
-            { name: "About", id: "about" },
-            { name: "How to Buy", id: "how-to-buy" },
-            { name: "Tokenomics", id: "tokenomics" },
-            { name: "Roadmap", id: "roadmap" },
-            { name: "Footer", id: "footer" }
+            { name: 'Hero', id: 'hero' },
+            { name: 'About', id: 'about' },
+            { name: 'How to Buy', id: 'how-to-buy' },
+            { name: 'Tokenomics', id: 'tokenomics' },
+            { name: 'Roadmap', id: 'roadmap' },
+            { name: 'Footer', id: 'footer' }
           ]}
         />
       </div>
-      <div id="hero" data-section="hero" className="scroll-mt-24">
-        <TokenBillboardHero
-          title="Welcome to BrainRot Coin!"
-          subtitle="Join the craze with easy buying steps"
-          contractAddress="0xYourContractAddress"
-          copyButtonText="Copy Address"
-          copiedText="Address Copied!"
+      <div id="hero" data-section="hero">
+        <FrameHero
+          title="Welcome to BrainRot!"
+          description="Join the chaotic wave of meme culture with BrainRot Coin, your gateway to the future of crypto."
+          primaryButtonText="Join Us"
+          secondaryButtonText="Learn More"
         />
       </div>
-      <div id="about" data-section="about" className="scroll-mt-24">
+      <div id="about" data-section="about">
         <SplitAbout
-          description="BrainRot Coin embodies the ultimate in chaotic memes and community engagement. Dive in for fun, profit, and a vibrant community!"
-        />
+          description="BrainRot is not just another cryptocurrency; it's a community-driven movement that fuses humor with finance. Our mission is to bring joy and innovation to the crypto space.">
+        </SplitAbout>
       </div>
-      <div id="how-to-buy" data-section="how-to-buy" className="scroll-mt-24">
-        <HowToBuy2D variant="reveal" />
+      <div id="how-to-buy" data-section="how-to-buy">
+        <HowToBuy2D variant="simple" />
       </div>
-      <div id="tokenomics" data-section="tokenomics" className="scroll-mt-24">
-        <ExpandingGridTokenomics
-          title="Tokenomics Explained"
-          description="Our tokenomics are built for the community with transparency and fairness."
-          cardItems={[
-            { id: 1, title: "Liquidity", description: "50% of tokens locked for stability." },
-            { id: 2, title: "Rewards", description: "10% of transactions go to community rewards." },
-            { id: 3, title: "Marketing", description: "Investing in our brand presence and growth." }
+      <div id="tokenomics" data-section="tokenomics">
+        <NumberGridTokenomics
+          title="Tokenomics Overview"
+          description="Understanding the distribution and sustainability of BrainRot Coin is key to its success."
+          kpiItems={[
+            { value: "10M", description: "Total Supply" },
+            { value: "2M", description: "Circulating Supply" },
+            { value: "5%", description: "Liquidity Pool" },
           ]}
         />
       </div>
-      <div id="roadmap" data-section="roadmap" className="scroll-mt-24">
-        <YearRoadmapTimeline
+      <div id="roadmap" data-section="roadmap">
+        <ProcessRoadmapTimeline
           items={[
-            { year: "2023", title: "Launch", description: "Kickstarting our journey with the initial community launch." },
-            { year: "2024", title: "Expansion", description: "Introducing new features and wider community outreach." },
-            { year: "2025", title: "Global Reach", description: "Expanding our presence in international markets." },
+            { id: 1, title: 'Initial Launch', description: 'Launch of BrainRot Coin and initial marketing.', image: '/images/logo.svg', items: [] },
+            { id: 2, title: 'Community Building', description: 'Building our community through engagement and utilities.', image: '/images/logo.svg', items: [] },
+            { id: 3, title: 'Partnerships', description: 'Establishing token partnerships and collaborations.', image: '/images/logo.svg', items: [] }
           ]}
         />
       </div>
-      <div id="footer" data-section="footer" className="scroll-mt-24">
-        <FooterLogoEmphasis
+      <div id="footer" data-section="footer">
+        <FooterBase
           logoSrc="/images/logo.svg"
-          logoAlt="BrainRot Logo"
-          logoText="BrainRot Coin"
+          logoWidth={120}
+          logoHeight={40}
           columns={[
-            { items: [{ label: "Privacy Policy", onClick: () => console.log('Privacy clicked')} ] },
-            { items: [{ label: "About Us", onClick: () => console.log('About clicked')} ] },
-            { items: [{ label: "Contact Us", onClick: () => console.log('Contact clicked')} ] }
+            { title: 'Quick Links', items: [
+              { label: 'Home', onClick: () => window.location.href = '#hero' },
+              { label: 'About', onClick: () => window.location.href = '#about' },
+              { label: 'How to Buy', onClick: () => window.location.href = '#how-to-buy' }
+            ] },
+            { title: 'Socials', items: [
+              { label: 'Twitter', onClick: () => window.location.href = 'https://twitter.com/' },
+              { label: 'Discord', onClick: () => window.location.href = 'https://discord.gg/' }
+            ] },
+            { title: 'Legal', items: [
+              { label: 'Privacy Policy', onClick: () => alert('Privacy Policy Clicked!') },
+              { label: 'Terms of Service', onClick: () => alert('Terms of Service Clicked!') }
+            ] }
           ]}
+          copyrightText="© 2023 BrainRot Coin. All rights reserved."
+          onPrivacyClick={() => alert('Privacy Policy Clicked!')}
         />
       </div>
     </SiteThemeProvider>
