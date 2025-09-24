@@ -62,9 +62,9 @@ export default function Home() {
       <div id="roadmap" data-section="roadmap">
         <ProcessRoadmapTimeline
           items={[
-            { id: '1', title: 'Initial Launch', description: 'Launch of BrainRot Coin and initial marketing.', image: '/images/logo.svg', items: [] },
-            { id: '2', title: 'Community Building', description: 'Building our community through engagement and utilities.', image: '/images/logo.svg', items: [] },
-            { id: '3', title: 'Partnerships', description: 'Establishing token partnerships and collaborations.', image: '/images/logo.svg', items: [] }
+            { id: '1', title: 'Initial Launch', description: 'Launch of BrainRot Coin and initial marketing.', image: '/images/logo.svg', items: [], reverse: false },
+            { id: '2', title: 'Community Building', description: 'Building our community through engagement and utilities.', image: '/images/logo.svg', items: [], reverse: true },
+            { id: '3', title: 'Partnerships', description: 'Establishing token partnerships and collaborations.', image: '/images/logo.svg', items: [], reverse: false }
           ]}
         />
       </div>
@@ -74,7 +74,7 @@ export default function Home() {
           logoWidth={120}
           logoHeight={40}
           columns={[
-            { title: 'Quick Links', items: [
+            { title: 'Quick Links', item: [
               { label: 'Home', onClick: () => window.location.href = '#hero' },
               { label: 'About', onClick: () => window.location.href = '#about' },
               { label: 'How to Buy', onClick: () => window.location.href = '#how-to-buy' }
