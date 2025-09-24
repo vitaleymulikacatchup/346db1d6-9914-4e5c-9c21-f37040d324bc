@@ -74,7 +74,7 @@ export default function Home() {
           logoWidth={120}
           logoHeight={40}
           columns={[
-            { title: 'Quick Links', item: [
+            { title: 'Quick Links', items: [
               { label: 'Home', onClick: () => window.location.href = '#hero' },
               { label: 'About', onClick: () => window.location.href = '#about' },
               { label: 'How to Buy', onClick: () => window.location.href = '#how-to-buy' }
